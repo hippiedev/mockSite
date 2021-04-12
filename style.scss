@@ -1,0 +1,238 @@
+*{
+  font-family: 'Jost';
+}
+body {
+  background: black;
+  overflow: hidden;
+  margin: 0;
+  cursor: none;
+}
+#burger_menu {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 100px;
+  z-index: 10;
+  padding: 15px;
+  cursor: none;
+  background: rgba(81, 82, 99, 0.5);
+  transition: 0.3s;
+}
+.cta {
+  font-size: 26px;
+  font-family: 'Butler';
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 600px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+#burger_menu:hover {
+  background: rgba(255, 120, 48, 0.897);
+  transition: 0.3s;
+}
+#overlay {
+  width: 100%;
+  transform: scaleY(0);
+  transform-origin: 0% 100%;
+  height: 100%;
+  border-radius: 60% 70% 0% 0%;
+  position: absolute;
+  background: rgb(255, 249, 240);
+  z-index: 50;
+}
+#menu-list {
+  z-index: 100;
+  color: black;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+}
+#menu-list li {
+  padding-bottom: 30px;
+  list-style: none;
+  opacity: 0;
+}
+#menu-list li:nth-child(even) {
+  margin-left: 60px;
+}
+#menu-list li span.list-text {
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  color: rgba(21, 25, 37, 0.926);
+  margin-left: 10px;
+}
+#menu-list li span.list-id {
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  top: -12px;
+  font-family: "Jost", sans-serif;
+  color: rgba(21, 25, 37, 0.863);
+}
+#menu-list {
+  z-index: 60;
+}
+svg {
+  height: 70px;
+  width: 70px;
+  z-index: 200;
+  font-family: "Jost";
+  font-weight: 100;
+}
+
+#circle {
+  z-index: 200;
+}
+#cancel {
+  z-index: 100;
+  opacity: 0;
+  position: relative;
+  top: 25px;
+  left: 90%;
+}
+span svg img {
+  position: absolute;
+  top: -50%;
+}
+#email-info {
+  z-index: 100;
+  margin-left: 70px;
+  position: relative;
+  top: 538px;
+  bottom: 0;
+  clear: both;
+  font-family: "Jost";
+  opacity: 0;
+}
+#links {
+  z-index: 100;
+  margin-right: 70px;
+  position: relative;
+  float: right;
+  top: 500px;
+  bottom: 0;
+  clear: both;
+}
+#links li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 20px;
+  font-size: 22px;
+  opacity: 0;
+  color: rgba(0, 0, 0, 0.837);
+}
+
+
+.cursor {
+  position: fixed;
+  background-color: rgb(255, 210, 151);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+      0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+}
+.menu{
+  transform: scale(2);
+  background-color: rgb(255, 120, 48)
+}
+.cursor.burger-active{
+  opacity: 1;
+  transform: scale(0);
+}
+.cursor.active{
+  transform: scale(6);
+  background: rgb(255, 120, 48);
+}
+.cursor.active::before{
+  content: "Load";
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  top: 4px;
+  left: 2.5px;
+  color: #fff;
+  font-size: 2.2px;
+}
+/*
+.cursor-follower {
+  position: fixed;
+  border:1px solid rgb(231, 147, 91);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+      0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(2px, 2px);
+  //overflow: hidden;
+
+  &.active {
+      opacity: 1;
+      transform: scale(3);
+  }
+
+  &.menu-active {
+      opacity: 1;
+      transform: scale(3);
+  }
+
+  &.hovered {
+      opacity: 1;
+  }
+
+}
+.cursor-follower.burger-active{
+  opacity: 1;
+  transform: scale(0);
+}
+*/
+
+.menu-image{
+  position: absolute;
+  top: 75%;
+  left: 130%;
+  width: fit-content;
+  height: fit-content;
+  z-index: 100;
+  opacity: 0;
+}
+.menu-image > div {
+  z-index: 1000;
+  height: 250px;
+  width: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.image1{
+  background: url("/assets/bg/austin-distel-mpN7xjKQ_Ns-unsplash.webp");
+  z-index: 1000;
+  transform: rotate(7deg);
+}
+
+.image2{
+  background: url("/assets/bg/good-faces-6ZpITFRMVFk-unsplash.webp");
+  background-position-y: -150px;
+  transform: rotate(355deg);
+  left: 30px;
+  top: -80px;
+}

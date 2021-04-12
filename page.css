@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Jost';
+}
+.image{
+    background: url("./assets/bg/austin-distel-mpN7xjKQ_Ns-unsplash.webp");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    background-position-y: center;
+}
+nav {
+    height: 175px;
+    width: 100%;
+}
+nav ul {
+    float: right;
+    padding-top: 54px;
+    padding-right: 50px;
+    opacity: 0;
+}
+nav ul li {
+    display: inline-block;
+    padding-left: 20px;
+}
+nav .logo {
+    float: left;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding-top: 54px;
+    padding-left: 50px;
+    opacity: 0;
+}
+main {
+    margin: 0 auto;
+    width: 80%;
+}
+h1 p{
+    font-family: 'Butler';
+    font-weight: 500;
+    line-height: 10px;
+    opacity: 0;
+    font-size: 50px;
+}
+p.body-text {
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    left: 700px;
+    width: 30%;
+}
